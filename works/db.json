@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "email": "logesh07cbe@gmail.com",
+      "password": "mskl",
+      "name": "Logesh"
+    },
+    {
+      "id": 2,
+      "email": "nithish@gmail.com",
+      "password": "nithish",
+      "name": "Nithish"
+    },
+    {
+      "id": 3,
+      "email": "rajadurai@gmail.com",
+      "password": "rajadurai",
+      "name": "Durai"
+    },
+    {
+      "id": 4,
+      "email": "DannySherin@gmail.com",
+      "password": "danny",
+      "name": "Danny"
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 5
+    },
+    {
+      "name": "hakdsjch",
+      "email": "pavi@gmail.com",
+      "password": "pavi",
+      "id": 6
+    },
+    {
+      "name": "Naruto",
+      "email": "naruto@gmail.com",
+      "password": "naruto",
+      "id": 7
+    },
+    {
+      "name": "nikhil",
+      "email": "nikhil@gmail.com",
+      "password": "nikhil",
+      "id": 8
+    }
+  ]
+}

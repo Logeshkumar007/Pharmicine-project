@@ -1,0 +1,23 @@
+#paper1{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../NavigationBar/pap.jpg);
+    background-size: cover;
+}
+#paper2{
+    
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+}
+ul{
+    text-align: left;
+
+}
+.div1{
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%); 
+}
