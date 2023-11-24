@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import SignUp from "./Component/Signup/signUp";
 import AppBars from "./Component/NavigationBar/Appbar";
 import Bill from "./Component/Bill/sample";
@@ -14,7 +14,7 @@ import Home from "./Component/homepage.js/home";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <FrontWeb/>,
+    element: <FrontWeb />,
   },
   {
     path: "/bill",
