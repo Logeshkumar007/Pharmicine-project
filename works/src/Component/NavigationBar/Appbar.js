@@ -42,7 +42,7 @@ export default function AppBars() {
             </Button>
             </Link>
 
-            <Link to="/bill">
+            <Link to="/invoice">
               <Button style={{ color: "white" }} color="inherit">
                 Bill
               </Button>
