@@ -61,8 +61,13 @@ export default function AppBars() {
               </Button>
             </Link>
 
+<<<<<<< HEAD
             <Link to="/bill">
               <Button style={{ color: "greenyellow" }} color="inherit">
+=======
+            <Link to="/invoice">
+              <Button style={{ color: "white" }} color="inherit">
+>>>>>>> 0bb889b7971e31e8aeb31a42f15bab3ab83fe047
                 Bill
               </Button>
             </Link>

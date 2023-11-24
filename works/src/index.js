@@ -11,14 +11,15 @@ import Review from "./Component/checkout/checkout";
 import Home from "./Component/homepage.js/home";
 // import invoice from './invoice/invoice-generator/src/components/InvoiceForm'
 // import InvoiceForm from "./invoice/invoice-generator/src/components/InvoiceForm";
+import Main from './Component/invoice/main';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <FrontWeb />,
   },
   {
-    path: "/bill",
-    element: <Bill />,
+    path: "/invoice",
+    element: <Main/>,
   },
 
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   },
   {
     path: "/home",
+    element: <Home />,
+  },
+  {
+    path: "/",
     element: <Home />,
   },
 ]);

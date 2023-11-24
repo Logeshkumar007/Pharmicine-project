@@ -14,7 +14,6 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import axios from "axios";
 import { Paper } from "@mui/material";
-import { useEffect } from "react";
 const defaultTheme = createTheme();
 
 export default function SignUp() {
@@ -206,17 +205,7 @@ export default function SignUp() {
                   Sign Up
                 </Button>
 
-                <Grid container justifyContent="flex-end">
-                  <Grid item>
-                    <Link
-                      to="/signin"
-                      variant="body2"
-                      style={{ color: "white" }}
-                    >
-                      Login Here
-                    </Link>
-                  </Grid>
-                </Grid>
+                
               </Box>
             </Box>
           </Container>
