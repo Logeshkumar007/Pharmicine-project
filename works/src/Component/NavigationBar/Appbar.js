@@ -1,3 +1,4 @@
+// Appbar.js
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -7,9 +8,12 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import { Link } from "react-router-dom";
 import MedicationIcon from "@mui/icons-material/Medication";
-import Home from "../homepage.js/home";
+import { useLocation } from "react-router-dom";
+import { useUser } from "../userContext/userContext";
 
 export default function AppBars() {
+  const { user: contextUser } = useUser();
+  console.log(contextUser)
   return (
     <div className="div1">
       <Box sx={{ flexGrow: 1 }}>
@@ -37,9 +41,9 @@ export default function AppBars() {
             </Typography>
 
             <Link to="/home">
-            <Button style={{ color: "white" }} color="inherit">
-              Home
-            </Button>
+              <Button style={{ color: "white" }} color="inherit">
+                Home
+              </Button>
             </Link>
 
             <Link to="/invoice">
@@ -48,11 +52,18 @@ export default function AppBars() {
               </Button>
             </Link>
 
+            <Link to="/profile">
+              <Button style={{ color: "white" }} color="inherit">
+                Profile
+              </Button>
+            </Link>
             <Link to="/signin">
               <Button style={{ color: "white" }} color="inherit">
                 Logout
               </Button>
             </Link>
+
+            
           </Toolbar>
         </AppBar>
       </Box>

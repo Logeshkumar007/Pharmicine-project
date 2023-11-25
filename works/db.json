@@ -25,12 +25,6 @@
       "name": "Danny"
     },
     {
-      "name": "",
-      "email": "",
-      "password": "",
-      "id": 5
-    },
-    {
       "name": "hakdsjch",
       "email": "pavi@gmail.com",
       "password": "pavi",
@@ -53,12 +47,6 @@
       "email": "pavithran@gmail.com",
       "password": "pavi",
       "id": 9
-    },
-    {
-      "name": "",
-      "email": "",
-      "password": "",
-      "id": 10
     }
   ]
 }

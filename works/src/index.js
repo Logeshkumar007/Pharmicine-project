@@ -1,3 +1,4 @@
+// indexedDB.js
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -11,15 +12,21 @@ import Review from "./Component/checkout/checkout";
 import Home from "./Component/homepage.js/home";
 // import invoice from './invoice/invoice-generator/src/components/InvoiceForm'
 // import InvoiceForm from "./invoice/invoice-generator/src/components/InvoiceForm";
-import Main from './Component/invoice/main';
+import { UserProvider } from "./Component/userContext/userContext";
+import Main from "./Component/invoice/main";
+import Profile from "./Component/profile/profile";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <FrontWeb/>,
+    element: <FrontWeb />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
   },
   {
     path: "/invoice",
-    element: <Main/>,
+    element: <Main />,
   },
 
   {
@@ -50,6 +57,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+     <UserProvider>
     <RouterProvider router={router} />
+     </UserProvider>
   </React.StrictMode>
 );

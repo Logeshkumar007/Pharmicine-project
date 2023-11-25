@@ -1,9 +1,12 @@
+// home.js
 // import AppBar from '@mui/material/AppBar';
 // import Box from '@mui/material/Box';
 // import Toolbar from '@mui/material/Toolbar';
+
 import {Paper,Grid,Container,Typography} from '@mui/material';
 export default function Home()
-{
+{    
+
     return(
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
