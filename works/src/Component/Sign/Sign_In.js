@@ -67,13 +67,8 @@ function SignIn() {
 
     if (user) {
       setSuccess(true);
-<<<<<<< HEAD
       updateUser(user);
       navigate("/Appbar", { state: { user } });
-=======
-      console.log({ success });
-      navigate("/home");
->>>>>>> b11cb9bf0df6d0d72c785f019f3ce95c8fa6cca0
     } else {
       alert("Invalid email or password");
     }

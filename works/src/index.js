@@ -19,13 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <FrontWeb />,
-<<<<<<< HEAD
   },
   {
     path: "/profile",
     element: <Profile />,
-=======
->>>>>>> b11cb9bf0df6d0d72c785f019f3ce95c8fa6cca0
   },
   {
     path: "/invoice",
@@ -42,7 +39,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Appbar",
-    element: <AppBars />,
+    element: <Home/>,
   },
   {
     path: "/checkout",
@@ -51,11 +48,7 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home />,
-  },
-  {
-    path: "/",
-    element: <Home />,
-  },
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -8,14 +8,7 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import { Link } from "react-router-dom";
 import MedicationIcon from "@mui/icons-material/Medication";
-<<<<<<< HEAD
-import { useLocation } from "react-router-dom";
-import { useUser } from "../userContext/userContext";
 
-export default function AppBars() {
-  const { user: contextUser } = useUser();
-  console.log(contextUser)
-=======
 // import Home from "../homepage.js/home";
 import { useEffect } from "react";
 import "../../Styles/Navbar.css";
@@ -37,7 +30,7 @@ export default function AppBars() {
       document.body.style.backgroundSize = originalBackgroundSize;
     };
   }, []);
->>>>>>> b11cb9bf0df6d0d72c785f019f3ce95c8fa6cca0
+
   return (
     <div className="div1">
       <Box sx={{ flexGrow: 1 }}>
@@ -66,22 +59,13 @@ export default function AppBars() {
             </Typography>
 
             <Link to="/home">
-<<<<<<< HEAD
-              <Button style={{ color: "white" }} color="inherit">
-=======
               <Button style={{ color: "greenyellow" }} color="inherit">
->>>>>>> b11cb9bf0df6d0d72c785f019f3ce95c8fa6cca0
                 Home
               </Button>
             </Link>
 
-<<<<<<< HEAD
-            <Link to="/bill">
-              <Button style={{ color: "greenyellow" }} color="inherit">
-=======
             <Link to="/invoice">
               <Button style={{ color: "white" }} color="inherit">
->>>>>>> 0bb889b7971e31e8aeb31a42f15bab3ab83fe047
                 Bill
               </Button>
             </Link>

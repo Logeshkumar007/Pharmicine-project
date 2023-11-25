@@ -1,41 +1,4 @@
-<<<<<<< HEAD
-// home.js
-// import AppBar from '@mui/material/AppBar';
-// import Box from '@mui/material/Box';
-// import Toolbar from '@mui/material/Toolbar';
 
-import {Paper,Grid,Container,Typography} from '@mui/material';
-export default function Home()
-{    
-
-    return(
-        <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={3}>
-              
-              <Grid item xs={12}>
-                <Paper id='paper1'
-                  sx={{
-                    
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 300,
-                  }}
-                >
-                  <h1>Welcome</h1>
-                </Paper>
-              </Grid>
-              {/* Recent Deposits */}
-              <Grid item xs={12} md={4} lg={3}>
-                <Paper id='paper2'
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 240,
-                  }}
-                >
-                  <div>
-=======
 import * as React from "react";
 // import Avatar from "@mui/material/Avatar";
 // import Button from "@mui/material/Button";
@@ -59,8 +22,6 @@ import AppBars from "../NavigationBar/Appbar";
 import IconButton from "@mui/material/IconButton";
 import SvgIcon from "@mui/material/SvgIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
->>>>>>> b11cb9bf0df6d0d72c785f019f3ce95c8fa6cca0
-
 // TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();

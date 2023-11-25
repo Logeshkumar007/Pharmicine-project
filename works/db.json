@@ -47,6 +47,12 @@
       "email": "pavithran@gmail.com",
       "password": "pavi",
       "id": 9
+    },
+    {
+      "name": "ranjith",
+      "email": "ranjith@gmail.com",
+      "password": "ranjith",
+      "id": 10
     }
   ]
 }
