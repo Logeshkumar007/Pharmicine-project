@@ -1,7 +1,7 @@
 // indexedDB.js
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import SignUp from "./Component/Signup/signUp";
 import AppBars from "./Component/NavigationBar/Appbar";
 import Bill from "./Component/Bill/sample";
@@ -19,10 +19,13 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <FrontWeb />,
+<<<<<<< HEAD
   },
   {
     path: "/profile",
     element: <Profile />,
+=======
+>>>>>>> b11cb9bf0df6d0d72c785f019f3ce95c8fa6cca0
   },
   {
     path: "/invoice",
