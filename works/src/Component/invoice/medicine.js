@@ -23,7 +23,7 @@ const MedicationList = ({ medications, addToCart, price }) => {
                 sx={{
                   marginTop: 2,
                   maxWidth: 345,
-                  backgroundColor: "#0096FF",
+                  backgroundColor: "grey",
                   marginLeft: 7,
                 }}
               >
