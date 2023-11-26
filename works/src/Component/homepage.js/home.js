@@ -1,4 +1,3 @@
-
 import * as React from "react";
 // import Avatar from "@mui/material/Avatar";
 // import Button from "@mui/material/Button";
@@ -21,12 +20,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import AppBars from "../NavigationBar/Appbar";
 import IconButton from "@mui/material/IconButton";
 import SvgIcon from "@mui/material/SvgIcon";
-<<<<<<< HEAD
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-=======
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
->>>>>>> 46cf48b7f6667f745c3333dadc69a325a05f8e79
 // TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();

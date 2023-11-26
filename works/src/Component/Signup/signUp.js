@@ -16,11 +16,11 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import axios from "axios";
 import { useEffect } from "react";
 import { Paper } from "@mui/material";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 const defaultTheme = createTheme();
 export default function SignUp() {
   const navigate = useNavigate();
-  
+
   const [formData, setFormData] = React.useState({
     name: "",
     email: "",
@@ -49,19 +49,19 @@ export default function SignUp() {
       [name]: value,
     }));
   };
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
-    
-    axios
-    .post("http://localhost:3001/posts", formData)
-    .then((response) => {
-      navigate("/signin");
-    })
 
-    .catch((error) => {
-      console.error("error" + error);
+    axios
+      .post("http://localhost:3001/posts", formData)
+      .then((response) => {
+        navigate("/signin");
+      })
+
+      .catch((error) => {
+        console.error("error" + error);
       });
   };
 

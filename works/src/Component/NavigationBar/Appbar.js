@@ -8,11 +8,8 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import { Link } from "react-router-dom";
 import MedicationIcon from "@mui/icons-material/Medication";
-<<<<<<< HEAD
-=======
 
 // import Home from "../homepage.js/home";
->>>>>>> 46cf48b7f6667f745c3333dadc69a325a05f8e79
 import { useEffect } from "react";
 import "../../Styles/Navbar.css";
 
@@ -67,40 +64,28 @@ export default function AppBars() {
               </Button>
             </Link>
 
-<<<<<<< HEAD
             <Link to="/aboutus" style={{ textDecoration: "none" }}>
               <Button style={{ color: "greenyellow" }} color="inherit">
                 About Us
               </Button>
             </Link>
 
-            <Link to="/invoice" style={{ textDecoration: "none" }}>
-              <Button style={{ color: "greenyellow" }} color="inherit">
-                Invoice
-              </Button>
-            </Link>
-
-            <Link to="/signin" style={{ textDecoration: "none" }}>
-=======
             <Link to="/invoice">
-              <Button style={{ color: "white" }} color="inherit">
+              <Button style={{ color: "greenyellow" }} color="inherit">
                 Bill
               </Button>
             </Link>
 
             <Link to="/profile">
-              <Button style={{ color: "white" }} color="inherit">
+              <Button style={{ color: "greenyellow" }} color="inherit">
                 Profile
               </Button>
             </Link>
             <Link to="/signin">
->>>>>>> 46cf48b7f6667f745c3333dadc69a325a05f8e79
               <Button style={{ color: "greenyellow" }} color="inherit">
                 Logout
               </Button>
             </Link>
-
-            
           </Toolbar>
         </AppBar>
       </Box>
