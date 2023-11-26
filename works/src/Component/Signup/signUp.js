@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -13,6 +13,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import axios from "axios";
+import { useEffect } from "react";
 import { Paper } from "@mui/material";
 const defaultTheme = createTheme();
 
@@ -204,8 +205,6 @@ export default function SignUp() {
                 >
                   Sign Up
                 </Button>
-
-                
               </Box>
             </Box>
           </Container>
