@@ -1,3 +1,4 @@
+// SignIn.js
 import * as React from "react";
 import { Link } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
@@ -16,8 +17,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
-// ... (existing imports)
+import { useUser } from "../userContext/userContext";
 
 const defaultTheme = createTheme();
 
@@ -53,21 +53,22 @@ function SignIn() {
   }, []);
 
   const navigate = useNavigate();
+  const { updateUser } = useUser();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
 
-    const isUserValid = array.some(
+    const user = array.find(
       (item) =>
-        data.get("email") === item.email &&
-        data.get("password") === item.password
+        item.email === data.get("email") &&
+        item.password === data.get("password")
     );
 
-    if (isUserValid) {
+    if (user) {
       setSuccess(true);
-      console.log({ success });
-      navigate("/home");
+      updateUser(user);
+      navigate("/Appbar", { state: { user } });
     } else {
       alert("Invalid email or password");
     }
@@ -121,7 +122,7 @@ function SignIn() {
                   name="email"
                   autoComplete="email"
                   autoFocus
-                  InputLabelProps={{ style: { color: "white" } }} // Set label color
+                  InputLabelProps={{ style: { color: "white" } }}
                   sx={{ color: "white" }}
                 />
                 <TextField
@@ -133,7 +134,7 @@ function SignIn() {
                   type="password"
                   id="password"
                   autoComplete="current-password"
-                  InputLabelProps={{ style: { color: "white" } }} // Set label color
+                  InputLabelProps={{ style: { color: "white" } }}
                   sx={{ color: "white" }}
                 />
                 <FormControlLabel
