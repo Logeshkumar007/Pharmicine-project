@@ -39,7 +39,7 @@ export default function AppBars() {
           position="static"
           sx={{
             backgroundColor: "black",
-            color: "greenyellow",
+            color: "white",
             boxShadow: "none",
           }}
         >
@@ -59,30 +59,30 @@ export default function AppBars() {
             </Typography>
 
             <Link to="/home" style={{ textDecoration: "none" }}>
-              <Button style={{ color: "greenyellow" }} color="inherit">
+              <Button style={{ color: "white" }} color="inherit">
                 Home
               </Button>
             </Link>
 
             <Link to="/aboutus" style={{ textDecoration: "none" }}>
-              <Button style={{ color: "greenyellow" }} color="inherit">
+              <Button style={{ color: "white" }} color="inherit">
                 About Us
               </Button>
             </Link>
 
             <Link to="/invoice">
-              <Button style={{ color: "greenyellow" }} color="inherit">
+              <Button style={{ color: "white" }} color="inherit">
                 Bill
               </Button>
             </Link>
 
             <Link to="/profile">
-              <Button style={{ color: "greenyellow" }} color="inherit">
+              <Button style={{ color: "white" }} color="inherit">
                 Profile
               </Button>
             </Link>
             <Link to="/signin">
-              <Button style={{ color: "greenyellow" }} color="inherit">
+              <Button style={{ color: "white" }} color="inherit">
                 Logout
               </Button>
             </Link>

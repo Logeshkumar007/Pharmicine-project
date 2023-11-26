@@ -85,16 +85,11 @@ export default function App() {
           <Grid item xs={12} sm={6} md={6} lg={6}>
             {/* <Card sx={{ backgroundColor: 'white', width: '100%', height: '100%' }}>
           <CardContent> */}
-            <Typography
-              color="#FFEEAD"
-              gutterBottom
-              variant="h4"
-              component="h2"
-            >
+            <Typography color="black" gutterBottom variant="h4" component="h2">
               Prescription Filling:
             </Typography>
             <Typography
-              color="#FFEEAD"
+              color="#000000"
               gutterBottom
               variant="h5"
               style={{ fontSize: "30px" }}
@@ -131,7 +126,7 @@ export default function App() {
             {/* <Card sx={{ backgroundColor: 'white', width: '100%', height: '100%' }}>
           <CardContent> */}
             <Typography
-              color="#FFEEAD"
+              color="#000000"
               gutterBottom
               variant="h4"
               component="h2"
@@ -139,7 +134,7 @@ export default function App() {
               Flu Shots:
             </Typography>
             <Typography
-              color="#FFEEAD"
+              color="#000000"
               gutterBottom
               variant="h5"
               style={{ fontSize: "30px" }}

@@ -41,12 +41,18 @@ const MedicationList = ({ medications, addToCart, price }) => {
                 <CardActions>
                   <Button
                     onClick={() => addToCart(medication)}
-                    style={{ color: "green", backgroundColor: "#72FFFF" }}
+                    style={{ color: "green", backgroundColor: "#E1ECC8" }}
                   >
                     Add to Cart
                   </Button>
-                  <Typography style={{ marginLeft: "20px", fontSize: "30px" }}>
-                    <strong> ${medication.price}</strong>
+                  <Typography
+                    style={{
+                      marginLeft: "150px",
+                      fontSize: "30px",
+                      // marginLeft: "20px",
+                    }}
+                  >
+                    <strong> ₹{medication.price}</strong>
                   </Typography>
                   {/* <Button size="small">Learn More</Button> */}
                 </CardActions>

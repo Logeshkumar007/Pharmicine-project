@@ -1,94 +1,92 @@
 .card-container {
-	background-color: rgba(146, 238, 26, 0.816);
-	min-width: 350px;
-	max-width: 600px;
-	height: auto;
-	border-radius: 14px;
-	box-shadow: 0px 3px 10px hsl(100, 75%, 35%);
+  background-color: #e1ecc8;
+  min-width: 350px;
+  max-width: 600px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: #e1ecc8;
 }
 .background {
-	background-image: 'https://static.thenounproject.com/png/3039079-200.png';
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	width: 100vw;
-	height: 6%;
-	margin-top: 100px;
+  background-image: "https://static.thenounproject.com/png/3039079-200.png";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 6%;
+  margin-top: 100px;
 }
 
 .bg-pattern-top {
-	position: absolute;
-	background-image: url("../imagesh/bg-pattern-top.svg");
-	
+  position: absolute;
+  background-image: url("../imagesh/bg-pattern-top.svg");
 }
 
 .bg-pattern-bottom {
-	background-image: url("../imagesh/bg-pattern-bottom.svg");
-	
+  background-image: url("../imagesh/bg-pattern-bottom.svg");
 }
 
 .hidden {
-	display: none;
+  display: none;
 }
 header {
-	/* background-image: url("../../assets/"); */
-	background-position: 0px 0px;
-	background-repeat: no-repeat;
-	background-size: contain;
-	
-	border-top-left-radius: 14px;
-	border-top-right-radius: 14px;
+  /* background-image: url("../../assets/"); */
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
 }
 
 img {
-	margin: auto;
-	width: 100px;
-	border: solid white 4px;
-	border-radius: 50%;
-	margin-top: 75px;
+  margin: auto;
+  width: 100px;
+  border: solid white 4px;
+  border-radius: 50%;
+  margin-top: 75px;
 }
 
 .bold-text {
-	font-weight: bold;
-	font-size: 1.1rem;
-	text-align: center;
-	padding: 10px 20px 0px 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 10px 20px 0px 20px;
 }
 
 .normal-text {
-	font-weight: normal;
-	font-size: 0.95rem;
-	color: hsl(0, 0%, 50%);
-	text-align: center;
-	padding-bottom: 10px;
+  font-weight: normal;
+  font-size: 0.95rem;
+  color: black;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 /* SOCIAL STATS */
 .smaller-text {
-	font-weight: normal;
-	font-size: 0.7rem;
-	color: hsl(0, 0%, 50%);
-	text-align: center;
-	letter-spacing: 1px;
-	padding-bottom: 20px;
-	line-height: 5px;
+  font-weight: normal;
+  font-size: 0.7rem;
+  color: black;
+  text-align: center;
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+  line-height: 5px;
 }
 
 .social-container {
-	display: flex;
-	border-top: solid rgb(206, 206, 206) 1px;
-	text-align: center;
+  display: flex;
+  border-top: solid black 1px;
+  text-align: center;
 }
 
 .followers {
-	flex: 1;
+  flex: 1;
 }
 
 .likes {
-	flex: 1;
+  flex: 1;
 }
 
 .photos {
-	flex: 1;
+  flex: 1;
 }

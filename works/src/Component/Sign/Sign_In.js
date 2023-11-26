@@ -5,8 +5,8 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
+// import FormControlLabel from "@mui/material/FormControlLabel";
+// import Checkbox from "@mui/material/Checkbox";
 import Grid from "@mui/material/Grid";
 import { Paper } from "@mui/material";
 import Box from "@mui/material/Box";
@@ -23,7 +23,7 @@ const defaultTheme = createTheme();
 
 function SignIn() {
   const [array, setArray] = useState([]);
-  const [success, setSuccess] = useState(false);
+  const [, setSuccess] = useState(false);
   useEffect(() => {
     // Save original body background style
     const originalBackground = document.body.style.background;
@@ -89,7 +89,7 @@ function SignIn() {
         },
       }}
     >
-      <Paper elevation={0} variant="outlined" sx={{borderRadius:"40px"}}>
+      <Paper elevation={0} variant="outlined" sx={{ borderRadius: "40px" }}>
         <ThemeProvider theme={defaultTheme}>
           <Container component="main" maxWidth="xs">
             <CssBaseline />
@@ -99,7 +99,6 @@ function SignIn() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                
               }}
             >
               <Avatar sx={{ m: 1, bgcolor: "blue" }}>
@@ -151,14 +150,22 @@ function SignIn() {
                 </Button>
 
                 <Grid container>
-                  <Grid item xs>
-                    <Link href="#" variant="body2" sx={{ color: "white" }}>
-                      Forgot password?
-                    </Link>
-                  </Grid>
+                  <Grid item xs></Grid>
                   <Grid item>
-                    <Link to="/signup" variant="body2" sx={{ color: "white" }}>
-                      Sign up
+                    <Link to="/signup" variant="body2">
+                      <Button
+                        sx={{
+                          color: "black",
+                          marginTop: "5px",
+                          // fontWeight: "bold",
+                          backgroundColor: "white",
+                          borderRadius: "10px",
+                          padding: "5px 10px",
+                        }}
+                      >
+                        {" "}
+                        Sign Up
+                      </Button>
                     </Link>
                   </Grid>
                 </Grid>

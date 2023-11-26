@@ -111,7 +111,7 @@ const Main = () => {
   return (
     <CartContext.Provider value={{ cart, setCart }}>
       <div>
-        <AppBars />
+        <AppBars cartCount={cart.length} />
         <MedicationList medications={medications} addToCart={addToCart} />
         <Invoice cart={cart} handleDelete={handleDelete} />
         {/* <Link to="pay">

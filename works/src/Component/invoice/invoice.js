@@ -13,7 +13,14 @@ import { useEffect } from "react";
 
 const Invoice = ({ cart, handleDelete }) => {
   const printInvoice = () => {
-    window.print();
+    const printWindow = window.open("", "_blank");
+    const invoiceContent =
+      document.querySelector(".invoice-container").outerHTML;
+    printWindow.document.write("<html><head><title>Print</title></head><body>");
+    printWindow.document.write(invoiceContent);
+    printWindow.document.write("</body></html>");
+    printWindow.document.close();
+    printWindow.print();
   };
   useEffect(() => {
     // Save original body background style
