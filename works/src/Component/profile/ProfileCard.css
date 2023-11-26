@@ -1,0 +1,94 @@
+.card-container {
+	background-color: rgba(146, 238, 26, 0.816);
+	min-width: 350px;
+	max-width: 600px;
+	height: auto;
+	border-radius: 14px;
+	box-shadow: 0px 3px 20px hsl(100, 75%, 35%);
+}
+.background {
+	background-image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c9a17937-8c0d-4a78-b75b-d9847af5b606/dg7ssyw-c79f2b26-1b69-4633-8cd6-4256bcca93eb.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2M5YTE3OTM3LThjMGQtNGE3OC1iNzViLWQ5ODQ3YWY1YjYwNlwvZGc3c3N5dy1jNzlmMmIyNi0xYjY5LTQ2MzMtOGNkNi00MjU2YmNjYTkzZWIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.EO5d-A_h03cUY0q0fAsM8qlGBnPxiT2hybyl1VHA1ws';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100vw;
+	height: 6%;
+	margin-top: 100px;
+}
+
+.bg-pattern-top {
+	position: absolute;
+	background-image: url("../imagesh/bg-pattern-top.svg");
+	
+}
+
+.bg-pattern-bottom {
+	background-image: url("../imagesh/bg-pattern-bottom.svg");
+	
+}
+
+.hidden {
+	display: none;
+}
+header {
+	/* background-image: url("../../assets/"); */
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	
+	border-top-left-radius: 14px;
+	border-top-right-radius: 14px;
+}
+
+img {
+	margin: auto;
+	width: 100px;
+	border: solid white 4px;
+	border-radius: 50%;
+	margin-top: 75px;
+}
+
+.bold-text {
+	font-weight: bold;
+	font-size: 1.1rem;
+	text-align: center;
+	padding: 10px 20px 0px 20px;
+}
+
+.normal-text {
+	font-weight: normal;
+	font-size: 0.95rem;
+	color: hsl(0, 0%, 50%);
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+/* SOCIAL STATS */
+.smaller-text {
+	font-weight: normal;
+	font-size: 0.7rem;
+	color: hsl(0, 0%, 50%);
+	text-align: center;
+	letter-spacing: 1px;
+	padding-bottom: 20px;
+	line-height: 5px;
+}
+
+.social-container {
+	display: flex;
+	border-top: solid rgb(206, 206, 206) 1px;
+	text-align: center;
+}
+
+.followers {
+	flex: 1;
+}
+
+.likes {
+	flex: 1;
+}
+
+.photos {
+	flex: 1;
+}
