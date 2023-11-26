@@ -1,43 +1,80 @@
-// src/components/Invoice.js
-import React from "react";
-import CartItem from "./cartItem";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import {
+  Typography,
+  List,
+  ListItem,
+  ListItemText,
+  Button,
+} from "@mui/material";
+import "../../Styles/invoice.css";
 
-const Invoice = ({ cart }) => {
+const Invoice = ({ cart, handleDelete }) => {
+  const printInvoice = () => {
+    window.print();
+  };
+
   useEffect(() => {
-    // Save original body background style
-    const originalBackground = document.body.style.background;
-    const originalBackgroundSize = document.body.style.backgroundSize;
+    const handlePrint = () => {
+      // Hide unwanted elements during printing
+      const nonPrintableElements = document.querySelectorAll(".non-printable");
+      nonPrintableElements.forEach((element) => {
+        element.style.display = "none";
+      });
 
-    // Set new body background style
-    document.body.style.background =
-      "url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c9a17937-8c0d-4a78-b75b-d9847af5b606/dg7ssyw-c79f2b26-1b69-4633-8cd6-4256bcca93eb.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2M5YTE3OTM3LThjMGQtNGE3OC1iNzViLWQ5ODQ3YWY1YjYwNlwvZGc3c3N5dy1jNzlmMmIyNi0xYjY5LTQ2MzMtOGNkNi00MjU2YmNjYTkzZWIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.EO5d-A_h03cUY0q0fAsM8qlGBnPxiT2hybyl1VHA1ws) repeat";
-    document.body.style.backgroundSize = "cover";
+      // Print the invoice
+      window.print();
 
-    // Reset to original body background style on component unmount
+      // Restore the display property of hidden elements
+      nonPrintableElements.forEach((element) => {
+        element.style.display = "block";
+      });
+    };
+
+    // Attach the handlePrint function to the 'beforeprint' event
+    window.addEventListener("beforeprint", handlePrint);
+
+    // Detach the handlePrint function when the component unmounts
     return () => {
-      document.body.style.background = originalBackground;
-      document.body.style.backgroundSize = originalBackgroundSize;
+      window.removeEventListener("beforeprint", handlePrint);
     };
   }, []);
+
   return (
-    <div
-      style={{
-        color: "white",
-        display: "flex",
-        flexDirection: "column",
-        padding: "5px",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "100%",
-        lineHeight: "1.5",
-      }}
-    >
-      <h2>Invoice</h2>
-      {cart.map((item) => (
-        <CartItem key={item.id} item={item} />
-      ))}
-      <h4>Total: ₹{cart.reduce((total, item) => total + item.price, 0)}</h4>
+    <div className="invoice-container">
+      <Typography variant="h4" className="invoice-title">
+        Invoice
+      </Typography>
+      <div className="printable-area">
+        <List>
+          {cart.map((item) => (
+            <ListItem key={item.id}>
+              <ListItemText
+                style={{ color: "#000", marginRight: "20px", padding: "10px" }}
+                primary={item.name}
+                secondary={`₹${item.price}`}
+              />
+              <button
+                style={{
+                  backgroundColor: "#0096ff",
+                  marginLeft: "20px",
+                  color: "#fff",
+                  border: "none",
+                  padding: "5px 10px",
+                }}
+                onClick={() => handleDelete(item.id)}
+              >
+                Delete
+              </button>
+            </ListItem>
+          ))}
+        </List>
+        <Typography variant="h6" className="invoice-total">
+          Total: ₹{cart.reduce((total, item) => total + item.price, 0)}
+        </Typography>
+        <Button variant="contained" color="primary" onClick={printInvoice}>
+          Pay Now
+        </Button>
+      </div>
     </div>
   );
 };

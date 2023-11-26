@@ -1,0 +1,28 @@
+.invoice-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin-left: 500px;
+  line-height: 1.5;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  /* margin-left: 50%;
+  margin-right: 50%; */
+}
+
+.invoice-title {
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.invoice-total {
+  color: black;
+  text-align: right;
+  margin-top: 20px;
+}

@@ -18,6 +18,9 @@ import App from "./Component/Aboutus/aboutus";
 import { UserProvider } from "./Component/userContext/userContext";
 // import Main from "./Component/invoice/main";
 import Profile from "./Component/profile/profile";
+import Payment from "./Component/invoice/payment";
+
+// function Index() {
 const router = createBrowserRouter([
   {
     path: "/",
@@ -53,6 +56,10 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   { path: "/aboutus", element: <App /> },
+  {
+    path: "/payment",
+    element: <Payment />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -62,3 +69,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </UserProvider>
   </React.StrictMode>
 );
+// }

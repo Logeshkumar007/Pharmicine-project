@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import MedicationList from "./medicine";
 import Invoice from "./invoice";
 import AppBars from "../NavigationBar/Appbar";
-import { Button } from "@mui/material";
-import { Link } from "react-router-dom";
+// import { Button } from "@mui/material";
+// import { Link, useNavigate } from "react-router-dom";
+import { CartContext } from "./context";
 const Main = () => {
   const [medications] = useState([
     {
@@ -98,16 +99,33 @@ const Main = () => {
   const addToCart = (medication) => {
     setCart([...cart, medication]);
   };
-
+  // const navigate = useNavigate();
+  const handleDelete = (id) => {
+    const index = cart.findIndex((item) => item.id === id);
+    if (index > -1) {
+      const newCart = [...cart];
+      newCart.splice(index, 1);
+      setCart(newCart);
+    }
+  };
   return (
-    <div>
-      <AppBars />
-      <MedicationList medications={medications} addToCart={addToCart} />
-      <Invoice cart={cart} />
-      <Link to="pay">
-        <Button variant="contained">SUBMIT</Button>
-      </Link>
-    </div>
+    <CartContext.Provider value={{ cart, setCart }}>
+      <div>
+        <AppBars />
+        <MedicationList medications={medications} addToCart={addToCart} />
+        <Invoice cart={cart} handleDelete={handleDelete} />
+        {/* <Link to="pay">
+          <Button
+            variant="contained"
+            onClick={() => {
+              navigate("/payment");
+            }}
+          >
+            SUBMIT
+          </Button> */}
+        {/* </Link> */}
+      </div>
+    </CartContext.Provider>
   );
 };
 
