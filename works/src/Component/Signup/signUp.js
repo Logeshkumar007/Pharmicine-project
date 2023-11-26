@@ -16,27 +16,21 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import axios from "axios";
 import { useEffect } from "react";
 import { Paper } from "@mui/material";
-// import { useEffect } from "react";
 const defaultTheme = createTheme();
 export default function SignUp() {
   const navigate = useNavigate();
-
   const [formData, setFormData] = React.useState({
     name: "",
     email: "",
     password: "",
+    phn: "",
   });
   useEffect(() => {
-    // Save original body background style
     const originalBackground = document.body.style.background;
     const originalBackgroundSize = document.body.style.backgroundSize;
-
-    // Set new body background style
     document.body.style.background =
       "url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c9a17937-8c0d-4a78-b75b-d9847af5b606/dg7ssyw-c79f2b26-1b69-4633-8cd6-4256bcca93eb.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2M5YTE3OTM3LThjMGQtNGE3OC1iNzViLWQ5ODQ3YWY1YjYwNlwvZGc3c3N5dy1jNzlmMmIyNi0xYjY5LTQ2MzMtOGNkNi00MjU2YmNjYTkzZWIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.EO5d-A_h03cUY0q0fAsM8qlGBnPxiT2hybyl1VHA1ws) repeat";
     document.body.style.backgroundSize = "cover";
-
-    // Reset to original body background style on component unmount
     return () => {
       document.body.style.background = originalBackground;
       document.body.style.backgroundSize = originalBackgroundSize;
@@ -52,9 +46,26 @@ export default function SignUp() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData);
+    if(formData.email==="")
+    {
+      alert("Please enter email");
+    }
+    else if(formData.name==="")
+    {
+      alert("Please enter name");
+    }
+    else if(formData.password==="")
+    {
+      alert("password");
+    }
+    else if(formData.phn==="")
+    {
+      alert("Please enter phn");
+    }
+    else{
 
-    axios
+      
+      axios
       .post("http://localhost:3001/posts", formData)
       .then((response) => {
         navigate("/signin");
@@ -63,10 +74,11 @@ export default function SignUp() {
       .catch((error) => {
         console.error("error" + error);
       });
-  };
-
-  return (
-    <Box
+    };
+    
+  }
+    return (
+      <Box
       sx={{
         marginTop: 5,
         display: "flex",
@@ -81,7 +93,7 @@ export default function SignUp() {
     >
       <Paper
         elevation={0}
-        sx={{ backgroundColor: "rgba(255,255,255,0.3)", color: "white" }}
+        sx={{ backgroundColor: "rgba(255,255,255,0.3)", color: "white" ,borderRadius:"40px"}}
         variant="outlined"
       >
         <ThemeProvider theme={defaultTheme}>
@@ -155,7 +167,7 @@ export default function SignUp() {
                       InputLabelProps={{
                         style: { color: "white" },
                       }}
-                    />
+                      />
                   </Grid>
                   <Grid item xs={12}>
                     <TextField
@@ -173,7 +185,7 @@ export default function SignUp() {
                       InputLabelProps={{
                         style: { color: "white" },
                       }}
-                    />
+                      />
                   </Grid>
                   <Grid item xs={12}>
                     <TextField
@@ -187,16 +199,27 @@ export default function SignUp() {
                       InputLabelProps={{
                         style: { color: "white" },
                       }}
-                    />
+                      />
                   </Grid>
                   <Grid item xs={12}>
-                    <FormControlLabel
-                      control={
-                        <Checkbox value="allowExtraEmails" color="primary" />
+                    <TextField
+                      required
+                      fullWidth
+                      name="Mobile Number"
+                      label="Mobile Number"
+                      type="Mobile Number"
+                      id="Mobile Number"
+                      autoComplete="Mobile Number"
+                      value={formData.phn}
+                      onChange={(e) =>
+                        handleInputChange("phn", e.target.value)
                       }
-                      label="I want to receive inspiration, marketing promotions and updates via email."
+                      InputLabelProps={{
+                        style: { color: "white" },
+                      }}
                     />
                   </Grid>
+                  
                 </Grid>
 
                 <Button

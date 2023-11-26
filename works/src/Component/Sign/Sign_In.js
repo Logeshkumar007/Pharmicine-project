@@ -89,7 +89,7 @@ function SignIn() {
         },
       }}
     >
-      <Paper elevation={0} variant="outlined">
+      <Paper elevation={0} variant="outlined" sx={{borderRadius:"40px"}}>
         <ThemeProvider theme={defaultTheme}>
           <Container component="main" maxWidth="xs">
             <CssBaseline />
@@ -99,6 +99,7 @@ function SignIn() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
+                
               }}
             >
               <Avatar sx={{ m: 1, bgcolor: "blue" }}>
@@ -137,11 +138,8 @@ function SignIn() {
                   InputLabelProps={{ style: { color: "white" } }}
                   sx={{ color: "white" }}
                 />
-                <FormControlLabel
-                  control={<Checkbox value="remember" color="primary" />}
-                  label="Remember me"
-                  sx={{ color: "white" }}
-                />
+                <br></br>
+                <br></br>
 
                 <Button
                   type="submit"

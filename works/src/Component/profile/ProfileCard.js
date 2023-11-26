@@ -6,24 +6,20 @@ function ProfileCard(props) {
 	return (
 		<div className="card-container">
 			<header>
-				<img src={avatar} alt={props.name} />
+				<img src='https://static.thenounproject.com/png/3039079-200.png' alt={props.name} />
 			</header>
 			<h1 className="bold-text">
-				{props.name} <span className="normal-text">18</span>
+				{props.name}
 			</h1>
-			<h2 className="normal-text">coimbatore</h2>
+			<h2 className="normal-text">{props.email}</h2>
 			<div className="social-container">
-				<div className="followers">
-					<h1 className="bold-text">{props.followers}</h1>
-					<h2 className="smaller-text">Followers</h2>
-				</div>
 				<div className="likes">
-					<h1 className="bold-text">{props.likes}</h1>
-					<h2 className="smaller-text">Likes</h2>
+					<h1 className="bold-text">Coimbatore</h1>
+					<h2 className="smaller-text">Location</h2>
 				</div>
 				<div className="photos">
-					<h1 className="bold-text">{props.photos}</h1>
-					<h2 className="smaller-text">Photos</h2>
+					<h1 className="bold-text">{props.phn}</h1>
+					<h2 className="smaller-text">Phone</h2>
 				</div>
 			</div>
 		</div>

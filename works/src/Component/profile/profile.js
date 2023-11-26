@@ -38,8 +38,8 @@ const Profile = () => {
 				age="28"
 				city="Nantes"
 				followers="666K"
-				likes="123K"
-				photos="614"
+				email={user.email}
+				phn={user.phn}
 			></ProfileCard>
 		</div>
     </div>
